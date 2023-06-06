@@ -1,0 +1,28 @@
+#new-todo-container{
+    display: flex;
+    justify-content: center;
+    top: 160px;
+    position: absolute;
+    top: 160px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#new-todo{
+    width: 475px;
+    height: 60px;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 65px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    color: hsl(235, 19%, 35%);
+}
+
+#new-todo::placeholder{
+    color: hsl(236, 9%, 61%);
+}

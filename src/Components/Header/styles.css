@@ -1,0 +1,72 @@
+#header-container-light, #header-container-dark{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 70px;
+    padding-bottom: 180px;
+    margin: 0;
+    background-size: 100vw 300px;
+}
+
+#header-container-light{
+    background-image: url('/images/bg-desktop-light.jpg');
+}
+
+
+#header-container-dark{
+    background-image: url('/images/bg-desktop-dark.jpg');
+}
+
+#header-title-container{
+    width: 500px;
+}
+
+#header-title-container h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 15px;
+}
+
+#header-btn-container{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 50px;
+}
+
+@media (max-width: 600px) {
+    
+    #header-container-light, #header-container-dark{
+        padding-bottom: 125px;
+        padding-top: 45px;
+    }
+  
+    #header-container-light{
+        background-image: url('/images/bg-mobile-light.jpg');
+    }
+    
+    
+    #header-container-dark{
+        background-image: url('/images/bg-mobile-dark.jpg');
+    }
+
+    #header-title-container{
+        width: 290px;
+    }
+
+    #header-title-container h1{
+        font-size: 27px;
+        font-weight: 700;
+        letter-spacing: 10px;
+    }
+
+    #header-btn-container{
+        width: 30px;
+    }
+
+    #header-btn-container img{
+        width: 20px;
+    }
+}

@@ -1,0 +1,113 @@
+#todo-list-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 540px;
+    top: -40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: auto;
+    box-shadow: 1px 10px 30px 0px rgba(72,75,106,0.2);
+    -webkit-box-shadow: 1px 10px 30px 0px rgba(72,75,106,0.2);
+    -moz-box-shadow: 1px 10px 30px 0px rgba(72,75,106,0.2);
+}
+
+#todo-list{
+    width: 540px;
+    background-color: white;
+    height: auto;
+    border-radius: 5px;
+}
+
+.todo-list-item{
+    padding: 0 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom-style: solid;
+    border-bottom-color: hsl(233, 11%, 84%);
+    border-bottom-width: 1px;
+}
+
+.todo-list-item span{
+    padding-left: 20px;
+    color: hsl(235, 19%, 35%);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.todo-list-checkbox{
+    appearance: none;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    border: 1.5px solid hsl(236, 33%, 92%);
+    vertical-align: -2px;
+    color:grey;
+    cursor: pointer;
+}
+
+.todo-list-checkbox:hover{
+    border-color: hsl(192, 100%, 67%);
+}
+
+.todo-list-checkbox::before{
+    content: url(./images/icon-check.svg);
+    display: flex;
+    background:  linear-gradient(130deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%);
+    position: absolute;
+    font-size: 2em;
+    width: 25px;
+    height: 25px;
+    right: -1.5px;
+    top: -0.05em;
+    visibility: hidden;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 20px;
+}
+
+.todo-list-checkbox:checked::before {
+    visibility: visible;
+  }
+
+  .todo-list-checkbox:checked + span {
+    text-decoration: line-through;
+    color:  hsl(233, 11%, 84%);
+  }
+  
+#todo-list-options{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 20px;
+    justify-content: space-between;
+    color: hsl(236, 9%, 61%);
+    font-size: 14px;
+}
+
+#todo-items-filter{
+    display: flex;
+    flex-direction: row;
+    width: 175px;
+    justify-content: space-between;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#todo-items-filter p:hover{
+    color: hsl(235, 19%, 35%);
+}
+
+#todo-items-clear{
+    cursor: pointer;
+}
+
+
+#todo-items-clear:hover{
+    color: hsl(235, 19%, 35%);
+}
