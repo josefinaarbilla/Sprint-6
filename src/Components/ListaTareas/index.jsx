@@ -70,7 +70,7 @@ const ListaTareas = ({theme}) => {
                             checked={tarea.completed}
                             onChange={() => toggleCompletado(tarea.id)} />
                         <span>{tarea.description}</span>
-                        <img src='../../src/assets/icon-cross.svg'  alt="" onClick={() => borrarTarea(tarea.id)}/>
+                        <img src='../../../public/images/icon-cross.svg'  alt="" onClick={() => borrarTarea(tarea.id)}/>
                         </div>
                     ))}
                     <div id='todo-list-options' className={theme === 'light' ? 'light-mode' : 'dark-mode'}>
