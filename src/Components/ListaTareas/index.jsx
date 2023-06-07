@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './styles.css'
 import { NuevaTarea } from '../NuevaTarea';
 export {ListaTareas}
-import {IconCross} from '../../../public/images/icon-cross.svg'
+import IconCross from '../../../public/images/icon-cross.svg'
 
 const ListaTareas = ({theme}) => {
 
