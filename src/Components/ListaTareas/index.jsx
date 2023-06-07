@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './styles.css'
 import { NuevaTarea } from '../NuevaTarea';
 export {ListaTareas}
+import {CrossIcon} from '../../../public/images/icon-cross.svg'
 
 const ListaTareas = ({theme}) => {
 
@@ -70,7 +71,7 @@ const ListaTareas = ({theme}) => {
                             checked={tarea.completed}
                             onChange={() => toggleCompletado(tarea.id)} />
                         <span>{tarea.description}</span>
-                        <img src="/../../../public/images/icon-cross.svg" alt="" onClick={() => borrarTarea(tarea.id)}/>
+                        <img src={CrossIcon} alt="" onClick={() => borrarTarea(tarea.id)}/>
                         </div>
                     ))}
                     <div id='todo-list-options' className={theme === 'light' ? 'light-mode' : 'dark-mode'}>
