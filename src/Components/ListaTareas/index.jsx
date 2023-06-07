@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './styles.css'
 import { NuevaTarea } from '../NuevaTarea';
 export {ListaTareas}
-import {CrossIcon} from '../../../public/images/icon-cross.svg'
 
 const ListaTareas = ({theme}) => {
 
@@ -59,7 +58,7 @@ const ListaTareas = ({theme}) => {
   }
 
     return(
-        <section>
+        <section id='todo-list-section'>
             <NuevaTarea agregarTarea={agregarTarea} theme={theme}/>
             <div id="todo-list-container" className={theme === 'light' ? 'light-mode' : 'dark-mode'}>
                 <div id="todo-list" className={theme === 'light' ? 'light-mode' : 'dark-mode'}>   
@@ -71,7 +70,7 @@ const ListaTareas = ({theme}) => {
                             checked={tarea.completed}
                             onChange={() => toggleCompletado(tarea.id)} />
                         <span>{tarea.description}</span>
-                        <img src={CrossIcon} alt="" onClick={() => borrarTarea(tarea.id)}/>
+                        <img src='../../src/assets/icon-cross.svg'  alt="" onClick={() => borrarTarea(tarea.id)}/>
                         </div>
                     ))}
                     <div id='todo-list-options' className={theme === 'light' ? 'light-mode' : 'dark-mode'}>
