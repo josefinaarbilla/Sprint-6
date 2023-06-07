@@ -11,18 +11,51 @@
 }
 
 #new-todo{
-    width: 475px;
+    width: 460px;
     height: 60px;
     border: none;
     outline: none;
-    background-color: white;
     border-radius: 5px;
     padding-left: 65px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 18px;
+    padding-right: 20px;
+}
+
+#new-todo.light-mode{
+    background-color: white;
     color: hsl(235, 19%, 35%);
 }
 
-#new-todo::placeholder{
+#new-todo.dark-mode{
+    background-color: hsl(235, 24%, 19%);
+    color: hsl(234, 39%, 85%);
+}
+
+#new-todo.light-mode::placeholder{
     color: hsl(236, 9%, 61%);
+}
+
+#new-todo.dark-mode::placeholder{
+    color:  hsl(234, 11%, 52%);
+}
+
+@media (max-width: 600px) {
+    
+    #new-todo-container{
+        position: absolute;
+        top: 107px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    #new-todo{
+        width: 255px;
+        font-size: 13px;
+        height: 50px;
+        padding-left: 50px;
+    }
+
 }

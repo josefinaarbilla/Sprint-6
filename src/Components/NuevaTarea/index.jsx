@@ -2,13 +2,12 @@ export {NuevaTarea}
 import { useState } from 'react'
 import './styles.css'
 
-const NuevaTarea = ({ agregarTarea }) => {
+const NuevaTarea = ({ agregarTarea , theme }) => {
     
     const[newTodo, setNewTodo] = useState('')
 
     const inputTextChange = (e) =>
         setNewTodo(e.target.value)
-        console.log(newTodo)
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
@@ -23,6 +22,7 @@ const NuevaTarea = ({ agregarTarea }) => {
             <form onSubmit={handleSubmit} action="">
                 <input 
                 id="new-todo" 
+                className={theme === 'light' ? 'light-mode' : 'dark-mode'}
                 type="text" 
                 placeholder="Create a new todo..." 
                 value={newTodo} 
