@@ -99,7 +99,7 @@
 }
 
 .todo-list-checkbox::before{
-    content: url(./images/icon-check.svg);
+    content: url(../../../public/images/icon-check.svg);
     display: flex;
     background:  linear-gradient(130deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%);
     position: absolute;
